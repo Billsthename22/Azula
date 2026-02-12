@@ -1,26 +1,48 @@
+/* 1. External font imports MUST be first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+/* 2. Tailwind framework import */
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0B0E11; /* Changed to NFL Dark for your theme */
+  --foreground: #ffffff;
+  
+  /* NFL Theme Colors */
+  --nfl-blue: #00539C;
+  --nfl-neon: #00FF41;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: 'Inter', var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Adding custom colors to the tailwind theme */
+  --color-nfl-blue: var(--nfl-blue);
+  --color-nfl-neon: var(--nfl-neon);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* 3. Global Styles */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* 4. Custom Utility Classes */
+.nfl-skew {
+  transform: skewX(-12deg);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ensure images in the bento grid look sharp */
+img {
+  max-width: 100%;
+  height: auto;
 }
