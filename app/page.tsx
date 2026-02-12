@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { 
   Library, Flame, Wind, Waves, Skull, Sparkles, 
-  ChevronRight, Map as MapIcon, ScrollText, Shield, 
+  Map as MapIcon, ScrollText, Shield, 
   Eye, Compass, Gem, Zap, Moon, Sun, Anchor
 } from "lucide-react"
 
@@ -24,7 +24,7 @@ export default function AzulaMythos() {
     { name: "Artemis", title: "The Huntress", power: "Archery", realm: "olympus", icon: <Moon className="w-4 h-4"/> },
   ]
 
-  if (!mounted) return <div className="min-h-screen bg-[#050505]" />
+  if (typeof window === "undefined") return <div className="min-h-screen bg-[#050505]" />
 
   return (
     <div className="flex min-h-screen bg-[#050505] text-[#E5E7EB] font-serif overflow-hidden selection:bg-amber-500 selection:text-black">

@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react"
 import { 
-  Zap, Shield, Sword, Sparkles, Fingerprint, 
-  Dna, Boxes, GiGrapes, Trophy, ChevronRight,
-  Flame, Hammer, Droplets, Gem
-} from "lucide-react"
+    Zap, Shield, Sword, Sparkles, Fingerprint, 
+    Dna, Boxes, Grape, Trophy, ChevronRight, // Changed GiGrapes to Grape
+    Flame, Hammer, Droplets, Gem
+  } from "lucide-react"
 import Link from "next/link"
 
 export default function HeroForge() {
