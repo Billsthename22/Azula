@@ -26,7 +26,7 @@ export default function OraclePrelude() {
   useEffect(() => { setMounted(true) }, [])
 
   // --- THE "SCARY" VOICE ENGINE ---
-  const speak = (text) => {
+  const speak = (text: string | undefined) => {
     if (typeof window !== "undefined" && window.speechSynthesis && !isMuted) {
       window.speechSynthesis.cancel()
 
